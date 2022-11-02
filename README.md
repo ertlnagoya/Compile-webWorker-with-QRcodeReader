@@ -1,3 +1,14 @@
+
+[https://github.com/murasuke/qr-reader-react-webworker.git](https://github.com/murasuke/qr-reader-react-webworker.git) を基にsolcでのCompileをwebWorkerで試みました。
+
+参考ソースの段階でQRReader.tsx内の 
+141行目：drawImage プロパティ 'drawImage' は型 'OffscreenRenderingContext' に存在しません。 プロパティ 'drawImage' は型 'ImageBitmapRenderingContext' に存在しません。
+
+142行目：getImageData プロパティ 'getImageData' は型 'OffscreenRenderingContext' に存在しません。 プロパティ 'getImageData' は型 'ImageBitmapRenderingContext' に存在しません。
+
+の2箇所に問題があるが実装は出来る事を確認
+
+------------------------------------------------------------------------------------------------------------------------
 # create-react-app(TypeScript)で作成したアプリにWeb Workerを導入する方法
 
 
