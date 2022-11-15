@@ -34,10 +34,7 @@ export function App(): React.ReactElement {
         <h1>Welcome to frontend!</h1>
       </header>
       <main>
-        <h2>Demos:</h2>
-        <MiningDemo />
-        <CompileSmartContractDemo />
-
+        <h2>QR code reader</h2>
         <QRReader {...qrParam} gecognizeCallback={onRecognizeCode} />
         <label>
         <input type="radio" name="rdo" value="0" onChange={(e) => setStopOnRecognize(e.target.value === "0")} checked={stopOnRecognize} />認識時に自動停止
@@ -47,6 +44,10 @@ export function App(): React.ReactElement {
         </label>        
         <button onClick={toggleVideoStream}>{(qrParam.pause? '再開': '停止')}</button>
         <p>QRコード：{code}</p>
+
+        <h2>Demos:</h2>
+        <CompileSmartContractDemo />
+        <MiningDemo />
       </main>
     </StyledApp>
   );
